@@ -3,7 +3,7 @@ import express from 'express'
 import path from 'path'
 
 // Making Server in Express js 
-const app =express()
+const app = express()
 const port = 5000 
 app.listen(port,()=>{
 console.log(`Server  is running on port ${port}`)
@@ -68,7 +68,7 @@ console.log(`Server  is running on port ${port}`)
 
 // })
 // remember jab ma data json ma bhjty ha tu wo convert ho jata ha api ma ab ya route ni raha ha ab ya ak api ha 
-
+    
 // app.get('/about',(req,res)=>{
 //     res.send("<h1>This Is About Page </h1>")
 // })
@@ -78,9 +78,15 @@ console.log(`Server  is running on port ${port}`)
 
 // path module in express 
 // path ma method hoty ha 
+
+const name = ' suman'// acha ab ya aghr muhjy randomcontent html ki file ma bhjna ha tu ham asy ni bhj sakty ha 
+// os k liya hamny ejs use krni pary gi
 app.get('/',  (req,res)=>{
-const dir = path.resolve()
-const url = path.join(dir,"./randomContent.html")
-res.sendFile(url)
- 
+// const dir = path.resolve()
+// const url = path.join(dir,"./randomContent.html")
+// res.sendFile(url)
+res.render("./index.ejs")
+
+
 })
+// ejs ka fida hamy ya ha k ham apni js ko es ma show krva sakty ha es k alva ya simple html hi ha 
